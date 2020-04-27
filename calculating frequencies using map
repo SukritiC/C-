@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#include<map>
+#include<iterator>
+using namespace std;
+int main()
+{
+    map<char,int> freq;
+    freq.insert(pair<char,int>('a',0));
+    freq.insert(pair<char,int>('s',0));
+    freq.insert(pair<char,int>('p',0));
+    
+    int n;
+    cin>>n;
+    string str;
+    cin>>str;
+    for(int i=0;i<str.length();i++){
+        char c=str[i];
+        if(c=='a'||c=='p'||c=='s'){
+            freq[c]++;
+        }
+    }
+    map<char,int>::iterator itr;
+    
+    if((itr= freq.find('a'))!=freq.end()){
+        cout<<itr->second<<" ";
+    }
+    if((itr= freq.find('s'))!=freq.end()){
+        cout<<itr->second<<" ";
+    }
+    if((itr= freq.find('p'))!=freq.end()){
+        cout<<itr->second;
+    }
+    
+	return 0;
+}
