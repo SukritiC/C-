@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+int calcPower(int num, int index){
+    if(index == 0)
+        return 1;
+    return num*calcPower(num,index-1);
+}
+int main()
+{
+    int num, pow;
+    cin>>num>>pow;
+
+    cout << calcPower(num, pow) << endl;
+    return 0;
+}
