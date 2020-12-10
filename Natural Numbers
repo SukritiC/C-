@@ -1,0 +1,16 @@
+
+#include<iostream>
+using namespace std;
+void printNaturalNumbers(int num){
+    if (num == 0)
+        return;
+    printNaturalNumbers(num-1);
+    cout<<num<<" ";
+}
+
+int main(){
+    int num;
+    cin>>num;
+    printNaturalNumbers(num);
+    return 0;
+}
