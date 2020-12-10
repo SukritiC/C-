@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int elementSearch(int arr[],int len,int num, int index){
+    if (len == 0)
+        return -1;
+    if (arr[index] == num)
+        return index;
+    return elementSearch(arr,len-1,num,index+1);
+}
+int main(){
+    int arr[10], length, findNum;
+    cin>>length;
+    for(int i=0;i<length;i++)
+        cin>>arr[i];
+    cout <<"Enter number to be search"<<endl;
+    cin>>findNum;
+    cout<<elementSearch(arr,length,findNum,0)<<endl;
+    return 0;
+}
+
+
+
+
