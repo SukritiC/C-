@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+int calcLength(char str[]){
+    if(str[0] == '\0')
+        return 0;
+    return 1+ calcLength(str+1);
+}
+int main(){
+    char str[100];
+    cin>> str;
+    cout<<calcLength(str);
+    return 0;
+}
