@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void replaceChar(char str[], char ch, char new_ch){
+    if(str[0] == '\0')
+        return;
+    if(str[0] != ch)
+        replaceChar(str+1,ch, new_ch);
+    else{
+        str[0] = new_ch;
+        replaceChar(str,ch,new_ch);
+    }
+    return;
+}
+int main(){
+    char str[100];
+    char ch,rep_ch;
+    cin>> str;
+    cout<<"Enter character to remove"<<endl;
+    cin>>ch;
+    cout<<"Enter Replacing Character"<<endl;
+    cin>>rep_ch;
+    replaceChar(str,ch, rep_ch);
+    cout<<str<<endl;
+    return 0;
+}
+
+
